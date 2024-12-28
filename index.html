@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Hokkaido</title>
+    <link rel="icon" type="image/x-icon" href="Images/icon.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header-home">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button class="burger-menu" id="burger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div class="hero">
+            <img src="Images/logo.png" alt="Explore Hokkaido Logo" class="logo">
+            <p>Your guide to Japan's northernmost island</p>
+        </div>
+    </header>
+    
+    <div id="burger-menu-content" class="burger-menu-content">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+
+    <div id="scroll-guide">
+        <p>Scroll down <i class="fas fa-arrow-down"></i></p>
+    </div>
+
+    <main>
+        <section id="featured-destinations">
+            <h2>Featured Destinations</h2>
+
+            <div class="destination1">
+                <div class="destination-img" style="background-image: url('Images/sapparo.jpg');" onclick="showFullScreenPreview('Images/sapporo.jpg');"></div>
+                <div class="destination-info-left">
+                    <h3>Sapporo</h3>
+                    <p>Experience the vibrant city life, famous for its annual snow festival, world-class beer, and delicious ramen.</p>
+                    <button class="read-more-btn" onclick="showOverlay('Sapporo, Hokkaido', ['Images/sapparo1.jpg', 'Images/sapparo2.jpg', 'Images/sapparo3.jpg'], 'Sapporo, known for its iconic annual Snow Festival, captivates visitors with stunning ice and snow sculptures, drawing crowds from across the world to experience its winter magic in a truly unique setting. Beyond the festival, the city boasts a rich brewing history, being the birthplace of Japan’s first beer, and its world-class beer continues to be celebrated for its exceptional quality. For food lovers, Sapporo’s delicious ramen, with its rich, savory broth and thick, chewy noodles, is a must-try dish, offering a comforting taste of the region’s culinary tradition.')">Read More</button>
+                </div>
+            </div>
+
+            <div class="destination2 alt-layout">
+                <div class="destination-info-right">
+                    <h3>Biei</h3>
+                    <p>Discover the picturesque beauty of Biei's rolling hills, vibrant flower fields, and tranquil rural landscapes, offering a serene escape in the heart of Hokkaido.</p>
+                    <button class="read-more-btn" onclick="showOverlay('Biei, Hokkaido', ['Images/lavender1.jpg', 'Images/lavender2.jpg', 'Images/lavender3.jpg'], 'Biei is a breathtaking haven of rolling hills, vibrant flower fields, and pristine natural beauty. Known as the Town of Hills it boasts striking landscapes that change with the seasons, from vivid blooms in summer to snow-dusted scenery in winter. Its iconic Blue Pond, with its surreal turquoise waters, adds to its allure, making Biei a must-visit destination for nature lovers and photographers alike. ')">Read More</button>
+                </div>
+                <div class="destination-img" style="background-image: url('Images/lavender.jpg');" onclick="showFullScreenPreview('Images/lavender.jpg');"></div>
+            </div>
+
+            <div class="destination3">
+                <div class="destination-img" style="background-image: url('Images/hakodate.jpg');" onclick="showFullScreenPreview('Images/hakodate.jpg');"></div>
+                <div class="destination-info-left">
+                    <h3>Hakodate</h3>
+                    <p>Discover Hakodate's stunning night views, historic sites, and fresh seafood markets.</p>
+                    <button class="read-more-btn" onclick="showOverlay('Hakodate, Hokkaido', ['Images/hakodate1.jpg', 'Images/hakodate2.jpg', 'Images/hakodate3.jpg'], 'Explore Hakodate, a city that captivates visitors with its breathtaking night views, where the city lights twinkle against the backdrop of the harbor and surrounding mountains, creating a magical atmosphere. Steeped in rich history, Hakodate offers a blend of Western and Japanese influences, evident in its charming architecture and cultural landmarks, while its exceptional seafood, including fresh sushi and local specialties like squid, provides a delicious taste of the region maritime heritage.')">Read More</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <div class="overlay-description" id="overlay-description">
+                <h2 id="overlay-title"></h2>
+                <p id="overlay-text"></p>
+                <button onclick="closeOverlay()">Close</button>
+            </div>
+            <div class="overlay-images" id="overlay-images">
+            </div>
+        </div>
+    </div>
+
+    <div id="full-screen-overlay">
+        <img id="full-screen-image" alt="Full-screen preview">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Explore Hokkaido. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="Javascript/script.js"></script>
+
+</body>
+</html>
